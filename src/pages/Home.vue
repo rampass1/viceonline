@@ -55,6 +55,7 @@
         </div>
       </div>
       <router-link to = "/admin">Router Link 1</router-link>
+      <cart/>
   </div>
 </template>
 
@@ -62,10 +63,12 @@
 
 <script>
 import axios from 'axios'
+import cart from '../components/cart.vue'
 
 export default {
   name: 'App',
   components: {
+    cart
   },
   data() {
     return {
