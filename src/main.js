@@ -4,6 +4,7 @@ import App from './App.vue'
 import Admin from './pages/Admin.vue'
 import Home from './pages/Home.vue'
 import './assets/tailwind.css'
+import store from '../src/store/index.js'
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
@@ -31,5 +32,6 @@ const router = new VueRouter({
 Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store: store(),
 }).$mount('#app')
